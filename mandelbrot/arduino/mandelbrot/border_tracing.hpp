@@ -40,7 +40,7 @@ struct Task {
   Task(int16_t x, int16_t y) : x(x), y(y) {}
 };
 
-struct PixelState {
+struct State {
   enum Flags {
     HANDLED = 0x10000000u,
     COMPLETED = 0x20000000u,
@@ -50,9 +50,9 @@ struct PixelState {
 
   uint32_t raw;
 
-  PixelState() : raw(0) {}
+  State() : raw(0) {}
 
-  PixelState(bool completed, uint32_t iter = 0, bool diverged = false)
+  State(bool completed, uint32_t iter = 0, bool diverged = false)
       : raw(HANDLED | (completed ? COMPLETED : 0) | iter |
             (diverged ? DIVERGED : 0)) {}
 
