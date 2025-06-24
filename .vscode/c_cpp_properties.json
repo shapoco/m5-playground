@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/mandelbrot/arduino/mandelbrot"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "linux-gcc-x64",
+            "defines": [
+                "SHAPOBROT_ENABLE_ASSERT"
+            ]
+        }
+    ],
+    "version": 4
+}
